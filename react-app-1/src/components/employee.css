@@ -1,0 +1,28 @@
+table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+td, th {
+    border: 1px solid #999;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.testing_text {
+    margin-top: 20px;
+}
+
+.action-btn {
+    text-align: center;
+    margin: auto 4px;
+    color: white;
+}
+
+.delete-btn {
+    background-color: red;
+}
+
+.edit-btn {
+    background-color: green;
+}
