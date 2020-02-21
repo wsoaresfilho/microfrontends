@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>Micro frontends</title>
+
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <link th:each="bundleName: ${bundleNames}" rel="stylesheet" type="text/css" href="static/css/main.css" th:href="@{${bundleName+'/static/css/main.css'}}">
+</head>
+<body>
+    <div th:replace="fragments/header :: header"></div>
+
+    <div class='home-container'>
+        <div th:each="divId: ${bundleNames}" id="root" th:id="@{${divId}}"></div>
+    </div>
+
+    <div th:replace="fragments/footer :: footer"></div>
+
+    <script src="js/bundle.js" th:each="bundleName: ${bundleNames}" th:src="@{${bundleName+'/static/js/bundle.js'}}"></script>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        const anyText = 'anytext';
+        const bundleNames = /*[[${bundleNames}]]*/ anyText;
+        const divIds = /*[[${divIds}]]*/ anyText;
+        const employees = /*[[${employees}]]*/ anyText;
+
+        if (window.location.pathname !== '/') {
+            window[bundleNames[0]](bundleNames[0], {
+                name: bundleNames[0],
+                employees: employees,
+            });
+        } else {
+            bundleNames.map((bname, index) => {
+                window[bname](bname, {
+                    name: bname,
+                    employees: employees,
+                });
+            });
+        }
+        /*]]>*/
+    </script>
+</body>
+</html>

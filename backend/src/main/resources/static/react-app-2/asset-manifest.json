@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.css",
+    "main.js": "/static/js/bundle.js",
+    "main.js.map": "/static/js/bundle.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e575387095aefdfe918a8660dac9d2b1.js": "/precache-manifest.e575387095aefdfe918a8660dac9d2b1.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.css.map": "/static/css/main.css.map",
+    "static/js/bundle.js.LICENSE.txt": "/static/js/bundle.js.LICENSE.txt",
+    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/css/main.css",
+    "static/js/bundle.js"
+  ]
+}
