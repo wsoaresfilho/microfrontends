@@ -9,7 +9,7 @@ function App(props) {
         { props.name && <h2>{`App: ${props.name}`}</h2> }
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          This is a React application!
+          This is a React application test!
         </p>
         <a
           className="App-link"

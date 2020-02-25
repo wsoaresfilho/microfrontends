@@ -38,7 +38,7 @@ class App extends Component {
             desc: '',
         };
 
-        ReactModal.setAppElement( `#${props.name}` || '#root');
+        ReactModal.setAppElement(props.name ? `${props.name}` : '#root');
 
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);

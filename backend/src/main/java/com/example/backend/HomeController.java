@@ -14,7 +14,6 @@ public class HomeController {
 
 	private final EmployeeRepository employeeRepository;
 	ArrayList<String> bundleNamesArray = new ArrayList<String>();
-	String divIdsArray[] = {"root", "app1", "app2"};
 
 	@Autowired
     public HomeController(EmployeeRepository employeeRepository) {
@@ -27,7 +26,6 @@ public class HomeController {
 		bundleNamesArray.add("react-app-1");
 		bundleNamesArray.add("react-app-2");
 		model.addAttribute("bundleNames", bundleNamesArray);
-		model.addAttribute("divIds", divIdsArray);
 		model.addAttribute("employees", employeeRepository.findAll());
 		return "index";
 	}
@@ -37,7 +35,6 @@ public class HomeController {
 		bundleNamesArray.clear();
 		bundleNamesArray.add("react-app-1");
 		model.addAttribute("bundleNames", bundleNamesArray);
-		model.addAttribute("divIds", divIdsArray);
 		model.addAttribute("employees", employeeRepository.findAll());
 		return "index";
 	}
@@ -47,7 +44,6 @@ public class HomeController {
 		bundleNamesArray.clear();
 		bundleNamesArray.add("react-app-2");
 		model.addAttribute("bundleNames", bundleNamesArray);
-		model.addAttribute("divIds", divIdsArray);
 		model.addAttribute("employees", employeeRepository.findAll());
 		return "index";
 	}
@@ -57,7 +53,6 @@ public class HomeController {
 		bundleNamesArray.clear();
 		bundleNamesArray.add("react-app-3");
 		model.addAttribute("bundleNames", bundleNamesArray);
-		model.addAttribute("divIds", divIdsArray);
 		model.addAttribute("employees", employeeRepository.findAll());
 		return "index";
 	}
