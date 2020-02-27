@@ -4,7 +4,7 @@ import './App.css';
 
 function App(props) {
   return (
-    <div className="App">
+    <div className="App main-container">
       <div className="App-header">
         { props.name && <h2>{`App: ${props.name}`}</h2> }
         <img src={logo} className="App-logo" alt="logo" />

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactModal from 'react-modal';
 import EmployeeList from './components/EmployeeList.jsx';
-import './App.css';
+import './App.scss';
 
 const customStyles = {
     overlay: {
@@ -38,7 +38,7 @@ class App extends Component {
             desc: '',
         };
 
-        ReactModal.setAppElement(props.name ? `${props.name}` : '#root');
+        ReactModal.setAppElement(props.name ? `#${props.name}` : '#root');
 
         this.openModal = this.openModal.bind(this);
         this.closeModal = this.closeModal.bind(this);

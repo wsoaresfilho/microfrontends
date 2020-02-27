@@ -159,7 +159,7 @@ module.exports = function(webpackEnv) {
     output: {
       // The build folder.
       // path: isEnvProduction ? paths.appBuild : undefined,
-      path: `/home/wsoares/microfrontend/backend/src/main/resources/static/${appPackageJson.name}`,
+      path: `/home/wsoares/projects/microfrontend/backend/src/main/resources/static/${appPackageJson.name}`,
       // Add /* filename */ comments to generated require()s in the output.
       pathinfo: isEnvDevelopment,
       // There will be one main bundle, and one file per asynchronous chunk.
